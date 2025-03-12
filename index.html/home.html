@@ -1,34 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desapega Já</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="scripts.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Bem-vindo ao Desapega Já!</h1>
-        <p>Seu espaço para desapegar de itens que não usa mais.</p>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Como Funciona</a></li>
-                <li><a href="#">Entrar</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
 
-    <main>
-        <section class="hero">
-            <h2>Desapegue do que não usa mais!</h2>
-            <p>Troque ou doe seus itens com facilidade.</p>
-            <button onclick="window.location.href='#'">Cadastre-se</button>
-        </section>
-    </main>
-
+        <main class="main-container">
+            <!-- Tela de boas-vindas -->
+            <section id="dashboard-screen" class="screen active">
+                <header>
+                    <h1>Desapega Já</h1>
+                </header>
+                <main>
+                    <p class="description">
+                        Um site para você desapegar e troca aquilo que você não precisa mais!<br>
+                        E ainda ajuda a quem precisa!
+                    </p>
+                    <button class="option-btn" onclick="showScreen('register-screen')">Novo Cadastro</button>
+                    <button class="option-btn" onclick="showScreen('login-screen')">Login</button>
+                    <button class="option-btn" onclick="showScreen('reset-screen')">Redefinir Senha</button>
+            
+                </main>
+            </section>
+            <!-- Tela de cadastro -->
+            <section id="register-screen" class="screen hidden">
+                <header>
+                    <h2>Cadastro de Usuário</h2>
+                </header>
+                <main>
+                    <form id="register-form">
+                        <label for="username">Nome de Usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        <label for="confirm-password">Repetir Senha:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <button class="option-btn" type="submit">Cadastrar</button>
+                    </form>
+                    <!--<button class="option-btn" onclick="showScreen('welcome-screen')">Voltar</button>-->
+                    <button class="option-btn" onclick="showScreen('dashboard-screen')">Voltar</button>
+                </main>
+            </section>
+            <!-- Tela de login -->
+            <section id="login-screen" class="screen hidden">
+                <header>
+                    <h2>Login</h2>
+                </header>
+                <main>
+                    <form id="login-form">
+                        <label for="login-email">E-mail:</label>
+                        <input type="email" id="login-email" name="email" required>
+                        <label for="login-password">Senha:</label>
+                        <input type="password" id="login-password" name="password" required>
+                        <button class="option-btn" type="submit">Entrar</button>
+                    </form>
+                    <!--<button class="option-btn" onclick="showScreen('welcome-screen')">Voltar</button>-->
+                    <button class="option-btn" onclick="showScreen('dashboard-screen')">Voltar</button>
+                </main>
+            </section>
+            <!-- Tela de redefinição de senha -->
+            <section id="reset-screen" class="screen hidden">
+                <header>
+                    <h2>Redefinir Senha</h2>
+                </header>
+                <main>
+                    <form id="reset-form">
+                        <label for="reset-email">E-mail:</label>
+                        <input type="email" id="reset-email" name="email" required>
+                        <button class="option-btn" type="submit">Redefinir Senha</button>
+                    </form>
+                    <!--<button class="option-btn" onclick="showScreen('welcome-screen')">Voltar</button>-->
+                    <button class="option-btn" onclick="showScreen('dashboard-screen')">Voltar</button>
+                </main>
+            </section>
+                </div>
+        </main>
+    
     <footer>
-        <p>&copy; 2025 Desapega Já. Todos os direitos reservados.</p>
+        <p>Senac Grupo 07</p>
     </footer>
+    
 </body>
 </html>

@@ -1,85 +1,352 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 50px;
-}
-
-/* Reset Básico */
+/* Estilos globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Estilizando o corpo da página */
 body {
-    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Verde claro */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #008000; /* Verde escuro */
+    margin-bottom: 20px;
+}
+
+/* Centralizando o conteúdo principal */
+.main-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Formulário e campos */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 14px;
     color: #333;
+}
+
+form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #88cc88;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #66b266;
+}
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Botões das opções */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-btn {
+    padding: 15px;
+    background-color: #68bd68b6; /* Verde claro */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: #66b266; /* Verde mais escuro */
+}
+
+/* Estilo das telas */
+.screen {
+    display: none; /* Oculta todas as telas por padrão */
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
 }
 
-/* Cabeçalho */
+.screen.active {
+    display: block; /* Exibe apenas a tela ativa */
+}
+
+/* Estilos para medições */
+#medicao-atual {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 15px;
+    }
+
+    .option-btn {
+        padding: 10px;
+    }
+}
+
+/* Estilo para o cabeçalho */
 header {
-    background: #ff5733;
-    color: #fff;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
+    background-color: #a8d5ba;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
 }
 
-/* Seção principal */
-.hero {
-    margin-top: 100px;
-    padding: 50px;
-}
-
-.hero h2 {
-    font-size: 28px;
-}
-
-.hero p {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.hero button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #ff5733;
+/* Botões de ação */
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #68bd68b6; /* Cor verde clara */
     border: none;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-.hero button:hover {
-    background: #e64a19;
+button:hover {
+    background-color: #66b266; /* Cor ao passar o mouse */
 }
 
-/* Rodapé */
-footer {
-    background: #333;
-    color: white;
+/* Estilo das telas ocultas */
+.hidden {
+    display: none;
+}
+
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Verde claro */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Centralizando o conteúdo principal */
+.main-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Formulário e campos */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+
+form input {
     padding: 10px;
-    margin-top: 50px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #88cc88;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #66b266;
+}
+
+/* Botões das opções */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-btn {
+    padding: 15px;
+    background-color: #68bd68b6; /* Verde claro */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: #66b266; /* Verde mais escuro */
+}
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Estilo para tabela com grade */
+.tabela-grade {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tabela-grade th, .tabela-grade td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.tabela-grade th {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para a tabela do diário alimentar */
+.tabela-grade {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tabela-grade th, .tabela-grade td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.tabela-grade th {
+    background-color: #f2f2f2;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.link-btn {
+    padding: 10px;
+    background-color: #4CAF50; /* Verde claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.link-btn:hover {
+    background-color: #45a049;
+}
+
+#tabela-historico-medicoes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+#tabela-historico-medicoes th, #tabela-historico-medicoes td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tabela-historico-medicoes th {
+    background-color: #f2f2f2;
+    color: black;
 }
