@@ -8,76 +8,75 @@
     <script defer src="scriptspage2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-    <!-- Página inicial -->
-    <main class="main-container">
-        <header>
-            <h1>Bem-vindo ao App para Desapegar.</h1>
-            <p>Selecione uma das opções abaixo:</p>
-        </header>
+    <div class="container">
+        <main class="main-container">
+            <header>
+                <h1>Bem-vindo ao App para Desapegar.</h1>
+                <p>Selecione uma das opções abaixo:</p>
+            </header>
 
-        <div class="button-container">
-            <!-- Botão para Incluir Medição -->
-            <button class="option-btn" onclick="showScreen('ultima-medicao')">,<h2>O que Deseja Desapegar?</h2></button>
-            <!-- Tela de Última Medição -->
-            <section id="ultima-medicao" class="screen hidden">
-                <h3>O que Deseja Desapegar?</h3>
-                <div id="medicao-atual">
-                    <!-- Dados da última medição serão exibidos aqui -->
-                    <p>Nenhum registro encontrado.</p>
-                </div>
-                <button class="option-btn" onclick="showScreen('registrar-medicao')">Incluir produto</button>
-                <button class="option-btn" onclick="showScreen('dashboard-screen')">Voltar</button>
-            </section>
-
-            <!-- Tela de Registrar Nova Medição -->
-            <section id="registrar-medicao" class="screen hidden">
-                <h2>Tipo do Produto.</h2>
-                <form id="form-medicao">
-                    <label for="nivel-glicose">Selecione a categoria:</label>
-                    <input type="number" id="nivel-glicose" required>
-
-                    <button class="option-btn" type="submit">Salvar</button>
-                </form>
-                <button class="option-btn" onclick="showScreen('ultima-medicao')">Voltar</button>
-            </section>
-            
-            <!-- Botão para Ver Histórico -->
-            <button class="option-btn" onclick="mostrarTelaHistorico()"><h2>Contato para troca</h2></button>
-            <section id="historico-medicoes" class="screen hidden">
-                <h3>Contato do usuário</h3>
-                <main>
-                    <table id="tabela-historico-medicoes">
-                        <thead>
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Nome</th>
-                                <th>Contato</th>
-                            </tr>
-                        </thead>
-                        <tbody id="lista-historico-medicoes">
-                            <!-- As medições serão inseridas aqui dinamicamente -->
-                        </tbody>
-                    </table>
-                    <button class="option-btn" onclick="showScreen('menu-principal')">Voltar</button>
-                </main>
-            </section>
-
-            <!-- Botão de Outras Funcionalidades -->
-            <button class="option-btn" onclick="toggleLinks()"><h2>Links Úteis Sobre Diabetes</h2></button>
-            <!-- Seção oculta com os links úteis -->
-            <section id="links-uteis" class="hidden">
-                <h3>Links Úteis</h3>
-                <div class="links-container">
-                    <button class="option-btn" class="link-btn" onclick="window.open('https://www.exercitodoacoes.org.br/', '_blank')">Exército da Salvação.</button>
-                    <button class="option-btn" class="link-btn" onclick="window.open('https://www.uol.com.br/vivabem/noticias/redacao/2021/02/23/desapego-como-aprender-a-exerce-lo-em-todas-as-areas-da-vida.htm')">Relações, objetos: como praticar o desapego quando algo já não serve mais...</button>
+            <div class="button-container">
+                <!-- Botão para Incluir Medição -->
+                <button class="option-btn" onclick="showScreen('ultima-medicao')">,<h2>O que Deseja Desapegar?</h2></button>
+                <!-- Tela de Última Medição -->
+                <section id="ultima-medicao" class="screen hidden">
+                    <h3>O que Deseja Desapegar?</h3>
+                    <div id="medicao-atual">
+                        <!-- Dados da última medição serão exibidos aqui -->
+                        <p>Nenhum registro encontrado.</p>
+                    </div>
+                    <button class="option-btn" onclick="showScreen('registrar-medicao')">Incluir produto</button>
                     <button class="option-btn" onclick="showScreen('dashboard-screen')">Voltar</button>
-                </div>
-                
-            </section>
-        </div>
-    </main>
+                </section>
 
+                <!-- Tela de Registrar Nova Medição -->
+                <section id="registrar-medicao" class="screen hidden">
+                    <h2>Tipo do Produto.</h2>
+                    <form id="form-medicao">
+                        <label for="nivel-glicose">Selecione a categoria:</label>
+                        <input type="number" id="nivel-glicose" required>
+
+                        <button class="option-btn" type="submit">Salvar</button>
+                    </form>
+                    <button class="option-btn" onclick="showScreen('ultima-medicao')">Voltar</button>
+                </section>
+                
+                <!-- Botão para Ver Histórico -->
+                <button class="option-btn" onclick="mostrarTelaHistorico()"><h2>Contato para troca</h2></button>
+                <section id="historico-medicoes" class="screen hidden">
+                    <h3>Contato do usuário</h3>
+                    <main>
+                        <table id="tabela-historico-medicoes">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Nome</th>
+                                    <th>Contato</th>
+                                </tr>
+                            </thead>
+                            <tbody id="lista-historico-medicoes">
+                                <!-- As medições serão inseridas aqui dinamicamente -->
+                            </tbody>
+                        </table>
+                        <button class="option-btn" onclick="showScreen('menu-principal')">Voltar</button>
+                    </main>
+                </section>
+
+                <!-- Botão de Outras Funcionalidades -->
+                <button class="option-btn" onclick="toggleLinks()"><h2>Links Úteis Sobre Diabetes</h2></button>
+                <!-- Seção oculta com os links úteis -->
+                <section id="links-uteis" class="hidden">
+                    <h3>Links Úteis</h3>
+                    <div class="links-container">
+                        <button class="option-btn" class="link-btn" onclick="window.open('https://www.exercitodoacoes.org.br/', '_blank')">Exército da Salvação.</button>
+                        <button class="option-btn" class="link-btn" onclick="window.open('https://www.uol.com.br/vivabem/noticias/redacao/2021/02/23/desapego-como-aprender-a-exerce-lo-em-todas-as-areas-da-vida.htm')">Relações, objetos: como praticar o desapego quando algo já não serve mais...</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
 
     <footer>
         <p>Desenvolvido por Senac Grupo 07</p>

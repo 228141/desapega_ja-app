@@ -151,7 +151,7 @@ button {
     width: 100%;
     margin: 10px 0;
     padding: 10px;
-    background-color: #f6ac3d; /* Cor verde clara */
+    background-color: #66b266; /* Cor verde clara */
     border: none;
     color: white;
     font-size: 16px;
@@ -160,7 +160,7 @@ button {
 }
 
 button:hover {
-    background-color: #f6ac3d; /* Cor ao passar o mouse */
+    background-color: #66b266; /* Cor ao passar o mouse */
 }
 
 /* Estilo das telas ocultas */
