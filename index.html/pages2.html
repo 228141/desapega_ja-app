@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diabetes App - Página Inicial</title>
+    <title>Desapega Já</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="scriptspage2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -18,10 +18,10 @@
 
         <div class="button-container">
             <!-- Botão para Incluir Medição -->
-            <button class="option-btn" onclick="showScreen('ultima-medicao')">O que Deseja Desapegar?</button>
+            <button class="option-btn" onclick="showScreen('ultima-medicao')">,<h2>O que Deseja Desapegar?</h2></button>
             <!-- Tela de Última Medição -->
             <section id="ultima-medicao" class="screen hidden">
-                <h2>O que Deseja Desapegar?</h2>
+                <h3>O que Deseja Desapegar?</h3>
                 <div id="medicao-atual">
                     <!-- Dados da última medição serão exibidos aqui -->
                     <p>Nenhum registro encontrado.</p>
@@ -43,9 +43,9 @@
             </section>
             
             <!-- Botão para Ver Histórico -->
-            <button class="option-btn" onclick="mostrarTelaHistorico()">Contato para troca</button>
+            <button class="option-btn" onclick="mostrarTelaHistorico()"><h2>Contato para troca</h2></button>
             <section id="historico-medicoes" class="screen hidden">
-                <h2>Contato do usuário</h2>
+                <h3>Contato do usuário</h3>
                 <main>
                     <table id="tabela-historico-medicoes">
                         <thead>
@@ -64,10 +64,10 @@
             </section>
 
             <!-- Botão de Outras Funcionalidades -->
-            <button class="option-btn" onclick="toggleLinks()">Links Úteis Sobre Diabetes</button>
+            <button class="option-btn" onclick="toggleLinks()"><h2>Links Úteis Sobre Diabetes</h2></button>
             <!-- Seção oculta com os links úteis -->
             <section id="links-uteis" class="hidden">
-                <h2>Links Úteis</h2>
+                <h3>Links Úteis</h3>
                 <div class="links-container">
                     <button class="link-btn" onclick="window.open('https://www.exercitodoacoes.org.br/', '_blank')">Exército da Salvação.</button>
                     <button class="link-btn" onclick="window.open('https://www.uol.com.br/vivabem/noticias/redacao/2021/02/23/desapego-como-aprender-a-exerce-lo-em-todas-as-areas-da-vida.htm')">Relações, objetos: como praticar o desapego quando algo já não serve mais...</button>
