@@ -87,6 +87,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background-color: ;
 }
 
 .option-btn {
@@ -137,7 +138,7 @@ footer {
 
 /* Estilo para o cabeçalho */
 header {
-    background-color: #a8d5ba;
+    background-color: #f6ac3d;
     color: white;
     padding: 20px;
     text-align: center;
@@ -150,7 +151,7 @@ button {
     width: 100%;
     margin: 10px 0;
     padding: 10px;
-    background-color: #68bd68b6; /* Cor verde clara */
+    background-color: #f6ac3d; /* Cor verde clara */
     border: none;
     color: white;
     font-size: 16px;
@@ -159,7 +160,7 @@ button {
 }
 
 button:hover {
-    background-color: #66b266; /* Cor ao passar o mouse */
+    background-color: #f6ac3d; /* Cor ao passar o mouse */
 }
 
 /* Estilo das telas ocultas */
@@ -176,7 +177,7 @@ button:hover {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e8f5e9; /* Verde claro */
+    background-color: #f5d7a9; /* Verde claro */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -192,7 +193,7 @@ body {
     padding: 20px;
     max-width: 600px;
     background-color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px #f6ac3d(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
@@ -223,7 +224,7 @@ form label {
 form button {
     padding: 10px;
     font-size: 16px;
-    background-color: #88cc88;
+    background-color: #f6ac3d;
     color: white;
     border: none;
     cursor: pointer;
@@ -232,7 +233,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #66b266;
+    background-color: #f6ac3d;
 }
 
 /* Botões das opções */
@@ -244,7 +245,7 @@ form button:hover {
 
 .option-btn {
     padding: 15px;
-    background-color: #68bd68b6; /* Verde claro */
+    background-color: #f6ac3d; /* Verde claro */
     color: white;
     border: none;
     border-radius: 8px;
@@ -261,8 +262,8 @@ form button:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #f1f1f1;
-    color: #333;
+    background-color: #a7eba7;
+    color: #f6ac3d;
     position: fixed;
     bottom: 0;
     width: 100%;

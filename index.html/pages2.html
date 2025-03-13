@@ -26,8 +26,8 @@
                     <!-- Dados da última medição serão exibidos aqui -->
                     <p>Nenhum registro encontrado.</p>
                 </div>
-                <button onclick="showScreen('registrar-medicao')">Incluir produto</button>
-                <button onclick="showScreen('menu-principal')">Voltar</button>
+                <button class="option-btn" onclick="showScreen('registrar-medicao')">Incluir produto</button>
+                <button class="option-btn" onclick="showScreen('dashboard-screen')">Voltar</button>
             </section>
 
             <!-- Tela de Registrar Nova Medição -->
@@ -37,9 +37,9 @@
                     <label for="nivel-glicose">Selecione a categoria:</label>
                     <input type="number" id="nivel-glicose" required>
 
-                    <button type="submit">Salvar</button>
+                    <button class="option-btn" type="submit">Salvar</button>
                 </form>
-                <button onclick="showScreen('ultima-medicao')">Voltar</button>
+                <button class="option-btn" onclick="showScreen('ultima-medicao')">Voltar</button>
             </section>
             
             <!-- Botão para Ver Histórico -->
@@ -69,9 +69,11 @@
             <section id="links-uteis" class="hidden">
                 <h3>Links Úteis</h3>
                 <div class="links-container">
-                    <button class="link-btn" onclick="window.open('https://www.exercitodoacoes.org.br/', '_blank')">Exército da Salvação.</button>
-                    <button class="link-btn" onclick="window.open('https://www.uol.com.br/vivabem/noticias/redacao/2021/02/23/desapego-como-aprender-a-exerce-lo-em-todas-as-areas-da-vida.htm')">Relações, objetos: como praticar o desapego quando algo já não serve mais...</button>
+                    <button class="option-btn" class="link-btn" onclick="window.open('https://www.exercitodoacoes.org.br/', '_blank')">Exército da Salvação.</button>
+                    <button class="option-btn" class="link-btn" onclick="window.open('https://www.uol.com.br/vivabem/noticias/redacao/2021/02/23/desapego-como-aprender-a-exerce-lo-em-todas-as-areas-da-vida.htm')">Relações, objetos: como praticar o desapego quando algo já não serve mais...</button>
+                    <button class="option-btn" onclick="showScreen('dashboard-screen')">Voltar</button>
                 </div>
+                
             </section>
         </div>
     </main>
