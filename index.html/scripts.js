@@ -115,3 +115,57 @@ document.addEventListener('DOMContentLoaded', function() {
         resetForm.addEventListener('submit', handleResetPassword);
     }
 });
+
+// 1- Função para mostrar uma tela específica e ocultar as demais
+function showScreen(screenId) {
+    const screens = document.querySelectorAll('.screen');
+    screens.forEach(screen => {
+        if (screen.id === screenId) {
+            screen.classList.remove('hidden');
+            screen.classList.add('active');
+        } else {
+            screen.classList.add('hidden');
+            screen.classList.remove('active');
+        }
+    });
+}
+
+// 2- Função para inicializar a página com base na URL ou exibir a tela padrão
+function initializePage() {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        showScreen(hash);
+    } else {
+        showScreen('dashboard-screen'); // Tela padrão
+    }
+}
+
+// 3- Função para salvar o número de telefone
+function handlePhoneSubmit(event) {
+    event.preventDefault();
+
+    const telefoneInput = document.getElementById('telefone');
+    const telefone = telefoneInput.value.trim();
+
+    // Validação do formato
+    const telefoneRegex = /^\(\d{2}\) \d \d{4}-\d{4}$/;
+    if (!telefoneRegex.test(telefone)) {
+        alert('Por favor, insira um número válido no formato (99) 9 9999-9999.');
+        return;
+    }
+
+    localStorage.setItem('telefone', telefone);
+    alert('Número salvo com sucesso!');
+    showScreen('dashboard-screen');
+}
+
+// 4- Inicialização das funcionalidades quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', function() {
+    initializePage();
+
+    // Event listener para o formulário de telefone
+    const phoneForm = document.getElementById('phone-form');
+    if (phoneForm) {
+        phoneForm.addEventListener('submit', handlePhoneSubmit);
+    }
+});

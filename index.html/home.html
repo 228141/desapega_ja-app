@@ -24,6 +24,7 @@
                     <button class="option-btn" onclick="showScreen('register-screen')"><h2>Novo Cadastro</h2></button>
                     <button class="option-btn" onclick="showScreen('login-screen')"><h2>Login</h2></button>
                     <button class="option-btn" onclick="showScreen('reset-screen')"><h2>Redefinir Senha</h2></button>
+                    <button class="option-btn" onclick="showScreen('phone-screen')"><h2>Contato</h2></button>
                 </main>
             </section>
             <!-- Tela de cadastro -->
@@ -37,8 +38,6 @@
                         <input type="text" id="username" name="username" required>
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" required>
-                        <label for="contato">Contato/WhatsApp:</label>
-                        <input type="contato" id="contato" name="contato" required>
                         <label for="password">Senha:</label>
                         <input type="password" id="password" name="password" required>
                         <label for="confirm-password">Repetir Senha:</label>
@@ -81,7 +80,20 @@
                     <button class="option-btn" onclick="showScreen('dashboard-screen')">Voltar</button>
                 </main>
             </section>
-                </div>
+            <!-- Tela para adicionar o número de celular -->
+            <section id="phone-screen" class="screen hidden">
+                <h2>Informe seu telefone</h2>
+                <form id="phone-form">
+                    <label for="telefone">Contato:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(99) 9 9999-9999" 
+                        pattern="\(\d{2}\) \d \d{4}-\d{4}" required>
+                    <small>Formato: (99) 9 9999-9999</small>
+
+                    <button type="submit">Salvar</button>
+                    <button class="option-btn" onclick="showScreen('login-form')">Voltar</button>
+                </form>
+            </section>
+        </div>
         </main>
     
     <footer>
